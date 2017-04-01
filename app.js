@@ -5,10 +5,12 @@ var word = ["dog", "cat"];
 var wordToGuess = "";
 var aboutToGuess = "";
 var changeInnerHTML = [];
+var alphabets = [];
 
 function startGame(){
-	for (var i = 0; i < letters.length; i++){
-		document.getElementById('letters-container').innerHTML += letters[i];
+	for (var i = 0; i <= letters.length; i++){
+		document.getElementById('letters-container').innerHTML = alphabets.join(' ');
+    alphabets.push(letters[i]);
 	}
 	var randomize = Math.floor(Math.random() * word.length);
 	wordToGuess = word[randomize];
@@ -27,10 +29,10 @@ function createLetters(e){
 			checkForWord(letters[i]);
 			document.getElementById('checked-letters').innerHTML += letters[i];
 			index = i;
-			letters.splice(index, 1);
-			document.getElementById('letters-container').innerHTML = letters;
+      letters.splice(index, 1);
+      document.getElementById('letters-container').innerHTML = letters.join(' ');
 		}
-	}	
+	}
 }
 
 function checkForWord(letter){
@@ -39,7 +41,7 @@ function checkForWord(letter){
 	for (var i = 0; i < wordToGuess.length; i++){
 		if (wordToGuess[i] === letter){
 			changeInnerHTML[i] = letter;
-			document.getElementById('word-container').innerHTML = changeInnerHTML;
+			document.getElementById('word-container').innerHTML = changeInnerHTML.join('');
 		}
 	}
 }
