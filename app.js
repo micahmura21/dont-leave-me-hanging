@@ -28,7 +28,8 @@ function createLetters(e){
 			document.getElementById('checked-letters').innerHTML += letters[i];
 			index = i;
 			letters.splice(index, 1);
-			document.getElementById('letters-container').innerHTML = letters;
+			letters.join(' ');
+			document.getElementById('letters-container').innerHTML = letters.join('');
 		}
 	}	
 }
@@ -39,7 +40,7 @@ function checkForWord(letter){
 	for (var i = 0; i < wordToGuess.length; i++){
 		if (wordToGuess[i] === letter){
 			changeInnerHTML[i] = letter;
-			document.getElementById('word-container').innerHTML = changeInnerHTML;
+			document.getElementById('word-container').innerHTML = changeInnerHTML.join('');
 		}
 	}
 }
