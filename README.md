@@ -43,4 +43,7 @@ Get started:
 1. Declare a global variable and set it's value as an array that contains all the letters of the alphabet.
 2. Declare a global variable and set it's value to an array that contains two surprise words, these are the words the player would have to guess.
 3. Declare a global variable and set its values as an empty strings. These will contain the randomized word we would have to guess.
-4. Declare an 
+4. Declare an global variable and set it's value to an empty array. This will be used to modify the contents of the array.
+5. Create a function called startGame that:
+- Populates the innerHTML of the element with the id 'letters-container'
+- Randomizes the content
