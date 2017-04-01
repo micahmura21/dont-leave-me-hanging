@@ -46,4 +46,8 @@ Get started:
 4. Declare an global variable and set it's value to an empty array. This will be used to modify the contents of the array.
 5. Create a function called startGame that:
 - Populates the innerHTML of the element with the id 'letters-container'
-- Randomizes the content
+- Randomly selects a word from our word bank and populates the innerHTML of the element with the id 'word-container' with "-".
+- Pushes the content of the innerHTML into the empty array.
+
+## Part 1: End! 
+Once everyone in the classroom has reached this point, you may continue.
